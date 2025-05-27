@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Bank App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg" style="background: #003366;">
+      <div class="container-fluid">
+         <div class="navbar-brand d-flex align-items-center">
+            <img src="images/citi.png" alt="Bank Logo" style="height:60px; margin-right: 10px;">
+            <span class="fs-3 text-white" style="font-weight: normal;">| INTERNET BANKING</span>
+         </div>
+         <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+         </button>
+         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="navbar-nav">
+               <a href="#" class="nav-link text-white">Citi Group</a>
+               <a href="#" class="nav-link text-white">About Us</a>
+               <a href="#" class="nav-link text-white">Customer Care</a>
+               <a href="#" class="nav-link text-white">Find ATM</a>
+            </div>
+         </div>
+      </div>
+   </nav>
+   <div class="secured-bar py-1 px-3" style="background: #005fa3; color: #fff; font-size: 0.95rem;">
+      <span>Secured Login - Personal information collected by the bank will not be disclosed</span>
+   </div>
+
+   <div class="main-container" id="auth-container">
+      <div class="form-section">
+         <h4 class="mb-4 fw-bold text-center" style="color: #005fa3;">Login to Internet Banking</h4>
+         <div>
+            <button class="tab-btn" disabled>Login ID / Customer ID</button>
+         </div>
+         <div id="login-error" class="error-message"></div>
+         <form id="loginform" class="mt-4">
+            
+            <div class="mb-3">
+               <label class="form-label">Email ID
+                  <span class="info-icon" title="Enter your registered email">&#9432;</span>
+               </label>
+               <input type="email" class="form-control" id="loginemail" required autocomplete="username">
+            </div>
+            <div class="mb-3">
+               <label class="form-label">Password</label>
+               <div class="input-group">
+                  <input type="password" class="form-control" id="loginpassword" required
+                     autocomplete="current-password">
+                  <span class="input-group-text" id="toggleLoginPassword" title="Show/Hide Password"
+                     style="border-left:0;">
+                     <svg id="loginEyeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#005fa3"
+                        viewBox="0 0 16 16">
+                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zm-8 4a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
+                        <path d="M8 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+                     </svg>
+                  </span>
+               </div>
+            </div>
+            <button type="button" onclick="login()" class="action-btn w-100">Login</button>
+            <div class="mt-3 text-center">
+               <a href="index.html" id="show-signup" style="color:#005fa3;text-decoration:underline;">Don't have an account? Sign
+                  up</a>
+            </div>
+         </form>
+
+      </div>
+      <div class="side-image-section d-none d-md-block"></div>
+   </div>
+<script src="login.js"></script>
+</body>
+</html>

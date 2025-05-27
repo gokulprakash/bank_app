@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Bank App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg" style="background: #003366;">
+    <div class="container-fluid">
+      <div class="navbar-brand d-flex align-items-center">
+        <img src="images/citi.png" alt="Bank Logo" style="height:60px; margin-right: 10px;">
+        <span class="fs-3 text-white" style="font-weight: normal;">| INTERNET BANKING</span>
+      </div>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div class="navbar-nav">
+          <a href="#" class="nav-link text-white">Citi Group</a>
+          <a href="#" class="nav-link text-white">About Us</a>
+          <a href="#" class="nav-link text-white">Customer Care</a>
+          <a href="#" class="nav-link text-white">Find ATM</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="secured-bar py-1 px-3" style="background: #005fa3; color: #fff; font-size: 0.95rem;">
+    <span>Secured Login - Personal information collected by the bank will not be disclosed</span>
+  </div>
+
+
+
+  <div class="main-container d-flex flex-column" id="dashboard-container">
+
+
+    <h1 class="text-center fw-bold fs-1 mt-4 ">Account Dashboard</h1>
+
+    <div class="d-flex flex-row w-100">
+
+      <div class="form-section pe-4" style="flex: 1;">
+        <div class="mb-3">
+          <span class="dashboard-label">Welcome, </span>
+          <span id="dashboarduser" class="fs-4 fw-semibold"></span>
+        </div>
+        <div class="mb-3">
+          <span class="dashboard-label">Current Balance:</span>
+          <span class="dashboard-balance fs-5 fw-semibold" id="dashboardbalance"></span>
+        </div>
+        <div id="dashboardmessage" class="mb-2"></div>
+        <form id="depositamnt" class="mb-3">
+          <div class="input-group">
+            <input type="number" min="1" class="form-control" id="depositamount" placeholder="Deposit Amount">
+            <button type="button" class="btn text-white" onclick="deposit()"
+              style="background-color: #003366;">Deposit</button>
+          </div>
+        </form>
+        <form id="withdrawamnt" class="mb-3">
+          <div class="input-group">
+            <input type="number" min="1" class="form-control" id="withdrawamount" placeholder="Withdraw Amount">
+            <button type="button" onclick="withdraw()" class="btn text-white"
+              style="background-color: #003366;">Withdraw</button>
+          </div>
+        </form>
+        <button class="btn btn-info w-100 mb-2 text-white" onclick="balance()" type="button"
+          style="background-color: #005fa3;" id="checkbalance">Check Balance</button>
+        <button class="btn btn-secondary w-100" onclick="logout()" id="logoutbtn">Logout</button>
+      </div>
+
+      <div id="userdetails" class="d-flex" style="flex: 1;"></div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="dashboard.js"></script>
+</body>
+
+</html>

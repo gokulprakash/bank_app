@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | Bank App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" style="background: #003366;">
+    <div class="container-fluid">
+      <div class="navbar-brand d-flex align-items-center">
+        <img src="images/citi.png" alt="Bank Logo" style="height:60px; margin-right: 10px;">
+        <span class="fs-3 text-white" style="font-weight: normal;">| INTERNET BANKING</span>
+      </div>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div class="navbar-nav">
+          <a href="#" class="nav-link text-white">Citi Group</a>
+          <a href="#" class="nav-link text-white">About Us</a>
+          <a href="#" class="nav-link text-white">Customer Care</a>
+          <a href="#" class="nav-link text-white">Find ATM</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="secured-bar py-1 px-3" style="background: #005fa3; color: #fff; font-size: 0.95rem;">
+    <span>Secured Login - Personal information collected by the bank will not be disclosed</span>
+  </div>
+
+   <div class="main-container" id="auth-container">
+      <div class="form-section">
+         <h4 class="mb-4 fw-bold text-center" style="color: #005fa3;">First time user registration</h4>
+         <div>
+            <button class="tab-btn" disabled>Sign Up</button>
+         </div>
+         <form id="signupform" class="mt-4">
+            <div id="signup-error" class="error-message"></div>
+            <div id="signsuccess" class="success-message"></div>
+            <div class="mb-3">
+               <label class="form-label">First Name</label>
+               <input type="text" class="form-control" id="signfirstname" required>
+            </div>
+            <div class="mb-3">
+               <label class="form-label">Last Name</label>
+               <input type="text" class="form-control" id="signlastname" required>
+            </div>
+            <div class="mb-3">
+               <label class="form-label">Email ID</label>
+               <input type="email" class="form-control" id="signemail" required autocomplete="username">
+            </div>
+            <div class="mb-3">
+               <label class="form-label">Password</label>
+               <div class="input-group">
+                  <input type="password" class="form-control" id="signpassword" required autocomplete="new-password">
+                  <span class="input-group-text" id="toggleSignupPassword" title="Show/Hide Password"
+                     style="border-left:0;">
+                     <svg id="signupEyeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#005fa3"
+                        viewBox="0 0 16 16">
+                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zm-8 4a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
+                        <path d="M8 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+                     </svg>
+                  </span>
+               </div>
+            </div>
+            <div class="mb-3">
+               <label class="form-label">Confirm Password</label>
+               <input type="password" class="form-control" id="signconfirmpassword" required
+                  autocomplete="new-password">
+            </div>
+            <button type="button" onclick="signUp()" class="action-btn w-100">Sign Up</button>
+            <div class="mt-3 text-center">
+               <a href="login.html" id="show-login" style="color:#005fa3;text-decoration:underline;">Already have an account?
+                  Login</a>
+            </div>
+         </form>
+      </div>
+      <div class="side-image-section d-none d-md-block" style="background-image: url('images/gokul6597_a_bank_employee_looking_at_his_laptop_in_side_a_bank__dc70403e-8af4-43d9-a1a0-474927d35dac.png');"></div>
+   </div>
+<script src="index.js"></script>
+</body>
+</html>
